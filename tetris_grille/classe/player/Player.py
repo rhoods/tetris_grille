@@ -20,7 +20,7 @@ class Player(pygame.sprite.Sprite):
         self.actif = True
         self.createPlayer()
         self.vitesse = vitesse
-        self.color = (0,0,0,0)
+        self.color = ''#(0,0,0,0)
         self.setColor()
         
         
@@ -37,13 +37,13 @@ class Player(pygame.sprite.Sprite):
         choix = random.randint(0, 3)
         
         if choix  == 0 :
-            self.color = (204,0,0,150) #rouge
+            self.color = 'rouge' #(204,0,0,150) #rouge
         if choix  == 1 :
-            self.color = (0,70,0,110) #vert
+            self.color = 'vert'#(0,70,0,110) #vert
         if choix  == 2 :
-            self.color = (34,66,124,124) #bleu
+            self.color = 'bleu' #(34,66,124,124) #bleu
         if choix  == 3 :
-            self.color = (250,160,0,150) #jaune
+            self.color = 'jaune' #(250,160,0,150) #jaune
             
     def getColor(self):
         return self.color
@@ -141,16 +141,17 @@ class Barre(Player):
          if colonneRotation > colonne2:
              print('toto')
              for i, brique in enumerate(l_futur_brique):
-                 print('i',i)
-                 print('avant brique.getLigne() ', brique.getLigne())
-                 brique.reposition(brique.getLigne() - i +1,brique.getColonne() + i -1 )
-                 print('apres brique.getLigne() ', brique.getLigne())
+                 
+                print('i',i)
+                print('avant brique.getLigne() ', brique.getLigne())
+                brique.reposition(brique.getLigne() - i +3,brique.getColonne() - i +3 )
+                print('apres brique.getLigne() ', brique.getLigne())
          else:
              print('tata')
              for i, brique in enumerate(l_futur_brique):
                  print('i',i)
                  print('avant brique.getLigne() ', brique.getLigne())
-                 brique.reposition(brique.getLigne() -i ,brique.getColonne() + i-4)
+                 brique.reposition(brique.getLigne() -i ,brique.getColonne() + i-3)
                  print('apres brique.getLigne() ', brique.getLigne())
                  
          return l_futur_brique        

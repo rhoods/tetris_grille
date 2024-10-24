@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|solutionrelative:tetris_grille\\tetris_grille.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\grille\\Grille.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|solutionrelative:tetris_grille\\classe\\grille\\Grille.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\case\\Case.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|solutionrelative:tetris_grille\\classe\\case\\Case.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\player\\Player.py||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -19,8 +19,8 @@
       "RelativeMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|solutionrelative:tetris_grille\\classe\\brique\\brique.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\case\\Case.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|solutionrelative:tetris_grille\\classe\\case\\Case.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\grille\\Grille.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|solutionrelative:tetris_grille\\classe\\grille\\Grille.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,16 +34,17 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Case.py",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\case\\Case.py",
               "RelativeDocumentMoniker": "tetris_grille\\classe\\case\\Case.py",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\case\\Case.py",
               "RelativeToolTip": "tetris_grille\\classe\\case\\Case.py",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAA4AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAzAAAA",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|",
               "WhenOpened": "2024-10-16T05:52:55.796Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -57,21 +58,23 @@
               "RelativeDocumentMoniker": "tetris_grille\\classe\\player\\Player.py",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\player\\Player.py",
               "RelativeToolTip": "tetris_grille\\classe\\player\\Player.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAIAAAA",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAAAIYAAAAmAAAA",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|",
-              "WhenOpened": "2024-10-19T09:29:59.436Z"
+              "WhenOpened": "2024-10-19T09:29:59.436Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Grille.py",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\grille\\Grille.py",
               "RelativeDocumentMoniker": "tetris_grille\\classe\\grille\\Grille.py",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\grille\\Grille.py",
               "RelativeToolTip": "tetris_grille\\classe\\grille\\Grille.py",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAFYAAAAVAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAB8AAAA3AAAA",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|",
-              "WhenOpened": "2024-10-16T06:03:03.432Z"
+              "WhenOpened": "2024-10-16T06:03:03.432Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -83,7 +86,8 @@
               "RelativeToolTip": "tetris_grille\\classe\\brique\\brique.py",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAQAAAA",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|",
-              "WhenOpened": "2024-10-16T05:49:41.072Z"
+              "WhenOpened": "2024-10-16T05:49:41.072Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -93,7 +97,7 @@
               "RelativeDocumentMoniker": "tetris_grille\\tetris_grille.py",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\tetris_grille.py",
               "RelativeToolTip": "tetris_grille\\tetris_grille.py",
-              "ViewState": "AQIAAKIAAAAAAAAAAAAAAI0AAABHAAAA",
+              "ViewState": "AQIAALcAAAAAAAAAAAAewM0AAAAdAAAA",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|",
               "WhenOpened": "2024-10-16T05:43:16.241Z",
               "EditorCaption": ""

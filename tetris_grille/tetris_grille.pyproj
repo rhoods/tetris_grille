@@ -26,7 +26,6 @@
     <Compile Include="classe\brique\brique.py" />
     <Compile Include="classe\case\Case.py" />
     <Compile Include="classe\grille\Grille.py" />
-    <Compile Include="classe\limite\Limite.py" />
     <Compile Include="classe\player\Player.py" />
     <Compile Include="env\Lib\site-packages\backports\zoneinfo\_common.py" />
     <Compile Include="env\Lib\site-packages\backports\zoneinfo\_tzpath.py" />
@@ -742,8 +741,6 @@
     <Folder Include="classe\bouton\__pycache__\" />
     <Folder Include="classe\brique\" />
     <Folder Include="classe\brique\__pycache__\" />
-    <Folder Include="classe\limite\" />
-    <Folder Include="classe\limite\__pycache__\" />
     <Folder Include="classe\case\" />
     <Folder Include="classe\grille\" />
     <Folder Include="classe\player\" />
@@ -1022,7 +1019,6 @@
     <Content Include="classe\bouton\__pycache__\Bouton.cpython-38.pyc" />
     <Content Include="classe\bouton\__pycache__\Bouton.cpython-39.pyc" />
     <Content Include="classe\brique\__pycache__\brique.cpython-38.pyc" />
-    <Content Include="classe\limite\__pycache__\Limite.cpython-38.pyc" />
     <Content Include="env\Include\site\python3.8\pygame\camera.h" />
     <Content Include="env\Include\site\python3.8\pygame\font.h" />
     <Content Include="env\Include\site\python3.8\pygame\freetype.h" />

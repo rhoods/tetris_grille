@@ -78,13 +78,13 @@ def tirage(min_val, max_val, precedent):
 def choixCouleur():
     choix = random.randint(0, 3)
     if choix  == 0 :
-        couleur = (204,0,0,150) #rouge
+        couleur = 'rouge' #(204,0,0,150) #rouge
     if choix  == 1 :
-        couleur = (0,70,0,110) #vert
+        couleur = 'vert' #(0,70,0,110) #vert
     if choix  == 2 :
-        couleur = (34,66,124,124) #bleu
+        couleur = 'bleu' #(34,66,124,124) #bleu
     if choix  == 3 :
-        couleur = (250,160,0,150) #jaune
+        couleur = 'jaune' #(250,160,0,150) #jaune
     return couleur
     
 def niveau1():
@@ -98,14 +98,17 @@ def niveau1():
     pygame.mixer.music.play(-1) #-1 pour jouer en boucle
 
     clock = pygame.time.Clock() #pour gener le frame rate
-    fenetre = pygame.display.set_mode((1200, 1000))
-    pygame.display.set_caption("Collision")
-    #fond = pygame.image.load((os.path.join('image/fond', 'fond.png'))).convert()
-    fond_droit = pygame.image.load((os.path.join('image/fond', 'fond_droit.png'))).convert()
+    fenetre = pygame.display.set_mode((1000, 1000))
+    pygame.display.set_caption("Tetris")
+    fond = pygame.Surface((1000, 1000), pygame.SRCALPHA)
+    fond.fill((200,0,0,20))
+    #fond_droit = pygame.image.load((os.path.join('image/fond', 'fond_droit_marron.png'))).convert()
     
+    police_fond = pygame.font.Font(None, 39)
     police = pygame.font.Font(None, 36)
     score = 0
-    texte_score = police.render(f"Score: {score}", True, 'Black')
+    texte_score_fond = police_fond.render(f"{score}", True, 'Black')
+    texte_score = police.render(f"{score}", True, 'White')
     #fenetre.blit(texte_score, (1050, 100))  # Position en haut à gauche
 
 
@@ -166,12 +169,16 @@ def niveau1():
         grille.changeCaseValue(f_ligne, f_colonne, 1 )
         grille.majColor(f_ligne, f_colonne, player.getColor())
 
-    fenetre.blit(fond_droit,(1000,0))
-    fenetre.blit(texte_score,(1050, 100))
+    #fenetre.blit(fond_droit,(1000,0))
+   
     for ligne in grille.l_cases:
         for case in ligne:
-            fenetre.blits([(case.image,case.rect), (case.contour,case.rect)])
-                     
+            
+            fenetre.blits([(case.image,case.rect), (case.contour,case.rect), (case.degrade, case.rect), (case.degrade_lumiere, case.rect)])
+            #fenetre.blits([(case.image,case.rect), (case.contour,case.rect), (case.degrade, case.rect)])
+            
+    fenetre.blit(texte_score_fond,(925, 20))    
+    fenetre.blit(texte_score,(925, 20))                 
     
     temps_bloque = 0
     intervalle_decalage = 100
@@ -199,8 +206,10 @@ def niveau1():
             if score >= 1000:
                  vitesse_player = 3
             if score >= 1500:
+                 fond.fill((200,0,0,30)) 
                  vitesse_player = 4
             if score >= 2500:
+                 fond.fill((200,0,0,45)) 
                  vitesse_player = 5
 
             choix_player = tirage(0, 6, choix_player_precedent)
@@ -406,14 +415,22 @@ def niveau1():
                      for y in ligne_a_supprimer:
                         grille.suppLigneComplete(y)
                         score += 100
-                        texte_score = police.render(f"Score: {score}", True, 'Black')
-                        fenetre.blit(fond_droit,(1000,0))
-                        fenetre.blit(texte_score, (1050, 100))  # Position en haut à gauche
+                        texte_score_fond = police_fond.render(f"{score}", True, 'Black')
+                        texte_score = police.render(f"{score}", True, 'White')
+                        fenetre.blit(fond,(0,0))
+                        
                                  
              for ligne in grille.l_cases:
                  for case in ligne:
-                     fenetre.blits([(case.image,case.rect), (case.contour,case.rect)])
-
+                     fenetre.blits([(case.image,case.rect), (case.contour,case.rect), (case.degrade, case.rect), (case.degrade_lumiere, case.rect)])
+             if score >= 1000:
+                 fenetre.blit(texte_score_fond,(923,21))    
+                 fenetre.blit(fond,(0,0))
+             else: 
+                 fenetre.blit(texte_score_fond,(924,21))
+             
+             fenetre.blit(texte_score,(925, 20))    
+             
          clock.tick(60) #limite a 60 fps
          pygame.display.update()
         
