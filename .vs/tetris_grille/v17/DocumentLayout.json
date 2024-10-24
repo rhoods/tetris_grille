@@ -1,0 +1,106 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\tetris_grille\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\tetris_grille.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|solutionrelative:tetris_grille\\tetris_grille.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\grille\\Grille.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|solutionrelative:tetris_grille\\classe\\grille\\Grille.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\player\\Player.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|solutionrelative:tetris_grille\\classe\\player\\Player.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\brique\\brique.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|solutionrelative:tetris_grille\\classe\\brique\\brique.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\case\\Case.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E8540B32-087B-4074-A499-92F1AB186C3D}|tetris_grille\\tetris_grille.pyproj|solutionrelative:tetris_grille\\classe\\case\\Case.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Case.py",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\case\\Case.py",
+              "RelativeDocumentMoniker": "tetris_grille\\classe\\case\\Case.py",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\case\\Case.py",
+              "RelativeToolTip": "tetris_grille\\classe\\case\\Case.py",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAA4AAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|",
+              "WhenOpened": "2024-10-16T05:52:55.796Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Player.py",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\player\\Player.py",
+              "RelativeDocumentMoniker": "tetris_grille\\classe\\player\\Player.py",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\player\\Player.py",
+              "RelativeToolTip": "tetris_grille\\classe\\player\\Player.py",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAIAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|",
+              "WhenOpened": "2024-10-19T09:29:59.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Grille.py",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\grille\\Grille.py",
+              "RelativeDocumentMoniker": "tetris_grille\\classe\\grille\\Grille.py",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\grille\\Grille.py",
+              "RelativeToolTip": "tetris_grille\\classe\\grille\\Grille.py",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAFYAAAAVAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|",
+              "WhenOpened": "2024-10-16T06:03:03.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "brique.py",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\brique\\brique.py",
+              "RelativeDocumentMoniker": "tetris_grille\\classe\\brique\\brique.py",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\classe\\brique\\brique.py",
+              "RelativeToolTip": "tetris_grille\\classe\\brique\\brique.py",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAQAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|",
+              "WhenOpened": "2024-10-16T05:49:41.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "tetris_grille.py",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\tetris_grille.py",
+              "RelativeDocumentMoniker": "tetris_grille\\tetris_grille.py",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\tetris_grille\\tetris_grille\\tetris_grille.py",
+              "RelativeToolTip": "tetris_grille\\tetris_grille.py",
+              "ViewState": "AQIAAKIAAAAAAAAAAAAAAI0AAABHAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|",
+              "WhenOpened": "2024-10-16T05:43:16.241Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
