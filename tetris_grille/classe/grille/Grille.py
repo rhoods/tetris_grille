@@ -82,6 +82,7 @@ class Grille(pygame.sprite.Sprite):
             return self.l_cases_occupe[ligne][colonne].getValue()
         except:
             return 1
+        
       
     
     def setCaseOccupe(self, ligne: int, colonne: int, valeur: int) -> int:
@@ -102,3 +103,35 @@ class Grille(pygame.sprite.Sprite):
         if self.getCaseOccupe(1,10) > 0:
             return True
         return False
+    
+
+    def setBordure(self, ligne: int, colonne: int):
+        ligne = int(ligne)
+        colonne = int(colonne)
+        
+        color = self.l_cases[ligne][colonne].getColor()
+        if self.l_cases[ligne][colonne].getValue() == 1:
+            try: # au cas où on sorte des limites de la liste
+                if self.l_cases[ligne + 1][colonne].getValue() == 0  or self.l_cases[ligne + 1][colonne].getColor() != color:
+                    self.l_cases[ligne][colonne].setBordure(3) 
+            except: 
+                pass
+         
+            try:
+                if self.l_cases[ligne - 1][colonne].getValue() == 0   or self.l_cases[ligne - 1][colonne].getColor() != color:
+                    self.l_cases[ligne][colonne].setBordure(0)
+            except: 
+                pass
+        
+            try:
+                if self.l_cases[ligne][colonne + 1].getValue() == 0   or self.l_cases[ligne][colonne+1].getColor() != color:
+                    self.l_cases[ligne][colonne].setBordure(2)
+            except:   
+                pass
+        
+            try:
+                if self.l_cases[ligne][colonne - 1].getValue() == 0   or self.l_cases[ligne][colonne-1].getColor() != color:
+                    self.l_cases[ligne][colonne].setBordure(1)
+            except: 
+                pass
+            

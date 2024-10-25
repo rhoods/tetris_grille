@@ -104,8 +104,10 @@ def niveau1():
     fond.fill((200,0,0,20))
     #fond_droit = pygame.image.load((os.path.join('image/fond', 'fond_droit_marron.png'))).convert()
     
-    police_fond = pygame.font.Font(None, 39)
-    police = pygame.font.Font(None, 36)
+    police_fond = pygame.font.Font("font/Oxanium/static/Oxanium-Bold.ttf", 46)
+    police_fond.bold
+    police = pygame.font.Font("font/Oxanium/static/Oxanium-Bold.ttf", 43)
+    police.bold
     score = 0
     texte_score_fond = police_fond.render(f"{score}", True, 'Black')
     texte_score = police.render(f"{score}", True, 'White')
@@ -165,20 +167,25 @@ def niveau1():
     
     for brique in position_player:
         f_ligne = int(brique.getLigne())
-        f_colonne = int(brique.getColonne())        
+        f_colonne = int(brique.getColonne())    
+        grille.setBordure(f_ligne,f_colonne)
         grille.changeCaseValue(f_ligne, f_colonne, 1 )
         grille.majColor(f_ligne, f_colonne, player.getColor())
+        
 
     #fenetre.blit(fond_droit,(1000,0))
-   
-    for ligne in grille.l_cases:
-        for case in ligne:
+    for i in range(grille.l_cases.shape[0]):  # Parcours des lignes
+        for j in range(grille.l_cases.shape[1]):  # Parcours des colonnes
+            grille.setBordure(i,j)
             
-            fenetre.blits([(case.image,case.rect), (case.contour,case.rect), (case.degrade, case.rect), (case.degrade_lumiere, case.rect)])
+    for ligne in grille.l_cases:
+        for case in ligne: 
+            fenetre.blits([(case.image,case.rect), (case.contour,case.rect), (case.degrade, case.rect), (case.degrade_lumiere, case.rect), (case.bordure_haut, case.rect), (case.bordure_droite, case.rect), (case.bordure_gauche, case.rect), (case.bordure_basse, case.rect)])
+            #fenetre.blits([(case.image,case.rect), (case.contour,case.rect), (case.degrade, case.rect), (case.degrade_lumiere, case.rect)])
             #fenetre.blits([(case.image,case.rect), (case.contour,case.rect), (case.degrade, case.rect)])
             
-    fenetre.blit(texte_score_fond,(925, 20))    
-    fenetre.blit(texte_score,(925, 20))                 
+    fenetre.blit(texte_score_fond,(849, 21))    
+    fenetre.blit(texte_score,(850, 20))                 
     
     temps_bloque = 0
     intervalle_decalage = 100
@@ -331,6 +338,7 @@ def niveau1():
              for brique in position_player:
                  f_ligne = int(brique.getLigne())
                  f_colonne = int(brique.getColonne())
+
                  grille.changeCaseValue(f_ligne, f_colonne, 1 )
                  grille.majColor(f_ligne, f_colonne, player.getColor())
                
@@ -351,58 +359,6 @@ def niveau1():
                  decalage_possible = pygame.time.get_ticks()
              
              if save_player:
-                #nb_decalage = 0
-                #while pygame.time.get_ticks() - decalage_possible <= intervalle_decalage:
-                #  if nb_decalage == 0:    
-                #      for event in pygame.event.get():  
-                #          if event.type == KEYDOWN:
-                #              dicKeys = pygame.key.get_pressed() 
-                #              if dicKeys[K_LEFT] :
-                #                  translation_possible = True
-                #                  for brique in player.getPosActuelle(): 
-                #                      colonne = int(brique.getColonne())
-                #                      ligne = int(brique.getLigne()) 
-                #                      if colonne == 0:
-                #                          translation_possible = False
-                #                          break
-                #                      if grille.getCaseOccupe(ligne, colonne - 1) == 1:
-                #                          translation_possible = False
-                #                          break
-                #                  if translation_possible:
-                #                      player.translation(-1)
-                #                      nb_decalage += 1
-                #       
-                #              if dicKeys[K_RIGHT] :    
-                #                  translation_possible = True
-                #                  for brique in player.getPosActuelle(): 
-                #                      colonne = int(brique.getColonne())
-                #                      ligne = int(brique.getLigne()) 
-                #      
-                #                      if colonne == grille.getNbColonne() - 1:
-                #                          translation_possible = False
-                #                          break
-                #                      if grille.getCaseOccupe(ligne, colonne + 1) == 1:
-                #                          translation_possible = False
-                #                          break
-                #                  if translation_possible:
-                #                      player.translation(1)
-                #                      nb_decalage += 1
-                #  if nb_decalage == 1:
-                #      old_position_player =  copy.deepcopy(position_player )
-                #      for brique in old_position_player:    
-                #         f_ligne = int(brique.getLigne())
-                #         f_colonne = int(brique.getColonne())
-                #         grille.changeCaseValue(f_ligne, f_colonne, 0 ) 
-                #         grille.majColor(f_ligne, f_colonne, (120,135,150,0) )
-                #
-                #      position_player = player.getPosActuelle()
-                #      for brique in position_player:
-                #          f_ligne = int(brique.getLigne())
-                #          f_colonne = int(brique.getColonne())
-                #          grille.changeCaseValue(f_ligne, f_colonne, 1 )
-                #          grille.majColor(f_ligne, f_colonne, player.getColor())
-
-
                  for brique in position_player: 
                      ligne = int(brique.getLigne())
                      colonne = int(brique.getColonne())
@@ -419,23 +375,123 @@ def niveau1():
                         texte_score = police.render(f"{score}", True, 'White')
                         fenetre.blit(fond,(0,0))
                         
-                                 
+             for i in range(grille.l_cases.shape[0]):  # Parcours des lignes
+                for j in range(grille.l_cases.shape[1]):  # Parcours des colonnes
+                    grille.setBordure(i,j)
+                        
+             
+
              for ligne in grille.l_cases:
                  for case in ligne:
-                     fenetre.blits([(case.image,case.rect), (case.contour,case.rect), (case.degrade, case.rect), (case.degrade_lumiere, case.rect)])
+                     fenetre.blits([(case.image,case.rect), (case.contour,case.rect), (case.degrade, case.rect), (case.degrade_lumiere, case.rect), (case.bordure_haut, case.rect), (case.bordure_droite, case.rect), (case.bordure_gauche, case.rect), (case.bordure_basse, case.rect)])
+
              if score >= 1000:
-                 fenetre.blit(texte_score_fond,(923,21))    
+                 fenetre.blit(texte_score_fond,(848,21))    
                  fenetre.blit(fond,(0,0))
              else: 
-                 fenetre.blit(texte_score_fond,(924,21))
+                 fenetre.blit(texte_score_fond,(849,21))
              
-             fenetre.blit(texte_score,(925, 20))    
+             fenetre.blit(texte_score,(850, 20))    
              
+
          clock.tick(60) #limite a 60 fps
          pygame.display.update()
+         
+    if score > lire_score():
+        sauvegarder_score(score)
         
-    menuJeu()
+    ecranScore(score)
 
+
+
+def lire_score():
+    try:
+        with open("score.txt", "r") as fichier:
+            return int(fichier.read())
+    except FileNotFoundError:
+        return 0
+
+# Fonction pour sauvegarder le score dans un fichier
+def sauvegarder_score(score):
+    with open("score.txt", "w") as fichier:
+        fichier.write(str(score))
+
+
+
+
+def ecranScore(score: int):
+    pygame.init()
+    pygame.key.set_repeat(400,30)
+    clock = pygame.time.Clock() #pour gener le frame rate
+
+    fenetreMenu = pygame.display.set_mode((1000, 1000))
+    fond = pygame.image.load((os.path.join('image/fond', 'fond.png'))).convert()
+    
+    boutonJeu = Bouton.Bouton("Rejouer",(400,300))
+    texteJeu = Bouton.TexteBouton("Rejouer",boutonJeu.rect)
+    boutonQuitter = Bouton.Bouton("Quitter",(400,450))
+    texteQuitter = Bouton.TexteBouton("Quitter",boutonQuitter.rect)
+    
+    police_fond = pygame.font.Font("font/Oxanium/static/Oxanium-Bold.ttf", 44)
+    police_fond.bold
+    police = pygame.font.Font("font/Oxanium/static/Oxanium-Bold.ttf", 43)
+    police.bold
+    
+    record = lire_score()
+    if record == score:
+        texte_record_fond = police_fond.render(f" Nouveau record: {record} !", True, 'Black')
+        texte_record = police.render(f" Nouveau record: {record} !", True, 'White')
+    else:
+        texte_record_fond = police_fond.render(f" Record: {record}", True, 'Black')
+        texte_record = police.render(f" Record: {record}", True, 'White')
+    
+    #fenetreMenu.blit(fond,(0,0))
+     
+
+
+    texte_score_fond = police_fond.render(f" Votre Score: {score}", True, 'Black')
+    texte_score = police.render(f" Votre Score: {score}", True, 'White')
+    fenetreMenu.blit(fond,(0,0))
+    
+    fenetreMenu.blit(texte_record_fond,(349,21))    
+    fenetreMenu.blit(texte_record,(350, 20))   
+    
+    fenetreMenu.blit(texte_score_fond,(349,121))    
+    fenetreMenu.blit(texte_score,(350, 120))    
+
+    jouer = 0
+    quitter = 0
+    continuer = True
+    while continuer :
+        mouse = pygame.mouse.get_pos()
+        for event in pygame.event.get(): 
+            if event.type == QUIT:     
+                continuer = 0
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                if boutonJeu.check_click(event.pos):
+                    jouer = 1
+                    continuer = False
+                if boutonQuitter.check_click(event.pos):
+                    quitter = 1
+                    continuer = False
+
+        
+        clock.tick(60) #limite a 60 fps
+        #fenetreMenu.blit(fond,(0,0))
+        fenetreMenu.blit(boutonJeu.image,boutonJeu.rect)
+        fenetreMenu.blit(texteJeu.image,texteJeu.rect)
+        fenetreMenu.blit(boutonQuitter.image,boutonQuitter.rect)
+        fenetreMenu.blit(texteQuitter.image,texteQuitter.rect)
+        #fenetreMenu.blit(texte_score_fond,(149,21))    
+        #fenetreMenu.blit(texte_score,(150, 20))       
+
+        pygame.display.update()
+    
+    if jouer == 1:
+        pygame.quit()
+        niveau1()
+    else:
+        pygame.quit()
 
 
 
