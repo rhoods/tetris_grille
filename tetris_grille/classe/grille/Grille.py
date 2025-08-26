@@ -1,15 +1,15 @@
 
-from ast import Try
-from cmath import rect
-import os
-from symbol import try_stmt
-from winreg import SetValue
+#from ast import Try
+#from cmath import rect
+#import os
+#from symbol import try_stmt
+#from winreg import SetValue
 import pygame
-import math
+#import math
 import numpy as np
-import copy
+#import copy
 
-import classe.case.Case as Case
+from ..case import Case as Case
 
 class Grille(pygame.sprite.Sprite):
     def __init__(self):
@@ -111,7 +111,7 @@ class Grille(pygame.sprite.Sprite):
         
         color = self.l_cases[ligne][colonne].getColor()
         if self.l_cases[ligne][colonne].getValue() == 1:
-            try: # au cas où on sorte des limites de la liste
+            try: # au cas oï¿½ on sorte des limites de la liste
                 if self.l_cases[ligne + 1][colonne].getValue() == 0  or self.l_cases[ligne + 1][colonne].getColor() != color:
                     self.l_cases[ligne][colonne].setBordure(3) 
             except: 

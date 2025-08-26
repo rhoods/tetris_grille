@@ -6,7 +6,7 @@ import math
 import copy
 import random
 
-import classe.brique.brique as Brique
+from ..brique import brique as Brique
 
 
 class Player(pygame.sprite.Sprite):
