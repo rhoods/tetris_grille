@@ -5,15 +5,17 @@ import math
 import numpy
 import random
 import copy
+
 #import clock
 
 from pygame.locals import *
 
-import classe.bouton.Bouton as Bouton
-import classe.brique.brique as Brique
-import classe.case.Case as Case
-import classe.grille.Grille as Grille
-import classe.player.Player as Player
+from .resources import get_asset_path
+from .classe.bouton import Bouton as Bouton
+from .classe.brique import brique as Brique
+from .classe.case import Case as Case
+from .classe.grille import Grille as Grille
+from .classe.player import Player as Player
 #import classe.limite.Limite as Limite
 
 
@@ -26,7 +28,7 @@ def menuJeu():
     clock = pygame.time.Clock() #pour gener le frame rate
 
     fenetreMenu = pygame.display.set_mode((1000, 1000))
-    fond = pygame.image.load((os.path.join('image/fond', 'fond.png'))).convert()
+    fond = pygame.image.load(get_asset_path(os.path.join('image/fond', 'fond.png'))).convert()
     
     boutonJeu = Bouton.Bouton("Jouer",(400,300))
     texteJeu = Bouton.TexteBouton("Jouer",boutonJeu.rect)
@@ -93,7 +95,7 @@ def niveau1():
     pygame.key.set_repeat(400,30)
   
     pygame.mixer.init()
-    pygame.mixer.music.load("sounds/son_music/son_music.mp3")
+    pygame.mixer.music.load(get_asset_path(os.path.join("sounds/son_music", "son_music.mp3")))
     pygame.mixer.music.set_volume(0.7)
     pygame.mixer.music.play(-1) #-1 pour jouer en boucle
 
@@ -104,14 +106,14 @@ def niveau1():
     fond.fill((200,0,0,20))
     #fond_droit = pygame.image.load((os.path.join('image/fond', 'fond_droit_marron.png'))).convert()
     
-    police_fond = pygame.font.Font("font/Oxanium/static/Oxanium-Bold.ttf", 46)
+    police_fond = pygame.font.Font(get_asset_path(os.path.join("font/Oxanium/static", "Oxanium-Bold.ttf")), 46)
     police_fond.bold
-    police = pygame.font.Font("font/Oxanium/static/Oxanium-Bold.ttf", 43)
+    police = pygame.font.Font(get_asset_path(os.path.join("font/Oxanium/static", "Oxanium-Bold.ttf")), 43)
     police.bold
     score = 0
     texte_score_fond = police_fond.render(f"{score}", True, 'Black')
     texte_score = police.render(f"{score}", True, 'White')
-    #fenetre.blit(texte_score, (1050, 100))  # Position en haut à gauche
+    #fenetre.blit(texte_score, (1050, 100))  # Position en haut ï¿½ gauche
 
 
     old_position_player = []
@@ -406,14 +408,14 @@ def niveau1():
 
 def lire_score():
     try:
-        with open("score.txt", "r") as fichier:
+        with open(get_asset_path(os.path.join("record", "score.txt")), "r", encoding="utf-8") as fichier:
             return int(fichier.read())
     except FileNotFoundError:
         return 0
 
 # Fonction pour sauvegarder le score dans un fichier
 def sauvegarder_score(score):
-    with open("score.txt", "w") as fichier:
+    with open(get_asset_path(os.path.join("record", "score.txt")), "w", encoding="utf-8") as fichier:
         fichier.write(str(score))
 
 
@@ -425,16 +427,16 @@ def ecranScore(score: int):
     clock = pygame.time.Clock() #pour gener le frame rate
 
     fenetreMenu = pygame.display.set_mode((1000, 1000))
-    fond = pygame.image.load((os.path.join('image/fond', 'fond.png'))).convert()
+    fond = pygame.image.load(get_asset_path(os.path.join('image/fond', 'fond.png'))).convert()
     
     boutonJeu = Bouton.Bouton("Rejouer",(400,300))
     texteJeu = Bouton.TexteBouton("Rejouer",boutonJeu.rect)
     boutonQuitter = Bouton.Bouton("Quitter",(400,450))
     texteQuitter = Bouton.TexteBouton("Quitter",boutonQuitter.rect)
     
-    police_fond = pygame.font.Font("font/Oxanium/static/Oxanium-Bold.ttf", 44)
+    police_fond = pygame.font.Font(get_asset_path(os.path.join("font/Oxanium/static", "Oxanium-Bold.ttf")), 44)
     police_fond.bold
-    police = pygame.font.Font("font/Oxanium/static/Oxanium-Bold.ttf", 43)
+    police = pygame.font.Font(get_asset_path(os.path.join("font/Oxanium/static", "Oxanium-Bold.ttf")), 43)
     police.bold
     
     record = lire_score()
@@ -496,5 +498,6 @@ def ecranScore(score: int):
 
 
 
-menuJeu()
-pygame.quit()
+if __name__ == "__main__":
+    menuJeu()
+    pygame.quit()

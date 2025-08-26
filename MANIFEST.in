@@ -1,0 +1,5 @@
+recursive-include tetris_grille/font *
+recursive-include tetris_grille/image *
+recursive-include tetris_grille/sounds *
+recursive-include tetris_grille/record *
+

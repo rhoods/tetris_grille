@@ -2,6 +2,7 @@
 from cmath import rect
 import os
 import pygame
+from ...resources import get_asset_path
 import math
 
 
@@ -20,20 +21,20 @@ class Case(pygame.sprite.Sprite):
         coef_degrade = min(50,0.1*posY)
         self.degrade_lumiere.fill((255,255,150,int(50-coef_degrade)))
         
-        self.contour = pygame.image.load((os.path.join('image/brique', 'brique_grise.png'))).convert_alpha()
+        self.contour = pygame.image.load(get_asset_path(os.path.join('image/brique', 'brique_grise.png'))).convert_alpha()
         self.color = ''#(125,125,125,0)''
         self.rect.center = (posX,posY) 
         
-        self.bordure_haut = pygame.image.load((os.path.join('image/brique', 'bordure_haut_noir.png'))).convert_alpha()
+        self.bordure_haut = pygame.image.load(get_asset_path(os.path.join('image/brique', 'bordure_haut_noir.png'))).convert_alpha()
         self.bordure_haut.set_alpha(0)
         
-        self.bordure_gauche = pygame.image.load((os.path.join('image/brique', 'bordure_gauche_noir.png'))).convert_alpha()
+        self.bordure_gauche = pygame.image.load(get_asset_path(os.path.join('image/brique', 'bordure_gauche_noir.png'))).convert_alpha()
         self.bordure_gauche.set_alpha(0)
         
-        self.bordure_droite = pygame.image.load((os.path.join('image/brique', 'bordure_droite_noir.png'))).convert_alpha()
+        self.bordure_droite = pygame.image.load(get_asset_path(os.path.join('image/brique', 'bordure_droite_noir.png'))).convert_alpha()
         self.bordure_droite.set_alpha(0)
 
-        self.bordure_basse = pygame.image.load((os.path.join('image/brique', 'bordure_basse_noir.png'))).convert_alpha()
+        self.bordure_basse = pygame.image.load(get_asset_path(os.path.join('image/brique', 'bordure_basse_noir.png'))).convert_alpha()
         self.bordure_basse.set_alpha(0)
      
     def getValue(self) -> int:
@@ -57,24 +58,24 @@ class Case(pygame.sprite.Sprite):
        if self.value == 0:
            self.image =  pygame.Surface((self.rect.width, self.rect.height))
            self.image.fill((80,80,80,0)) #transparent
-           self.contour = pygame.image.load((os.path.join('image/brique', 'brique_grise.png'))).convert_alpha()
+           self.contour = pygame.image.load(get_asset_path(os.path.join('image/brique', 'brique_grise.png'))).convert_alpha()
           
            self.degrade.fill((0,0,0,int(0.09 * self.rect.y)))
            self.color = ''
        else:
            if color == 'rouge':
-                self.image = pygame.image.load((os.path.join('image/brique', 'brique_rouge.png'))).convert()
+                self.image = pygame.image.load(get_asset_path(os.path.join('image/brique', 'brique_rouge.png'))).convert()
                 #self.degrade.fill((102,0,0,int(0.2 * self.rect.y)))
            if color == 'vert':
-                self.image = pygame.image.load((os.path.join('image/brique', 'brique_verte.png'))).convert()         
+                self.image = pygame.image.load(get_asset_path(os.path.join('image/brique', 'brique_verte.png'))).convert()         
                # self.degrade.fill((0,35,0,int(0.2 * self.rect.y)))
            if color == 'bleu':
-                self.image = pygame.image.load((os.path.join('image/brique', 'brique_bleu.png'))).convert()   
+                self.image = pygame.image.load(get_asset_path(os.path.join('image/brique', 'brique_bleu.png'))).convert()   
                 #self.degrade.fill((17,33,62,int(0.2 * self.rect.y)))
            if color == 'jaune':   
-                self.image = pygame.image.load((os.path.join('image/brique', 'brique_jaune.png'))).convert()
+                self.image = pygame.image.load(get_asset_path(os.path.join('image/brique', 'brique_jaune.png'))).convert()
                # self.degrade.fill((125,80,0,int(0.2 * self.rect.y)))
-           self.contour = pygame.image.load((os.path.join('image/brique', 'contour_case_transparent.png'))).convert_alpha()     
+           self.contour = pygame.image.load(get_asset_path(os.path.join('image/brique', 'contour_case_transparent.png'))).convert_alpha()     
            #self.degrade.fill((0,0,0,0))
            self.degrade.fill((0,0,0,0))
     

@@ -1,12 +1,13 @@
 import os
 import pygame
+from ...resources import get_asset_path
 
 
 class Bouton:
     def __init__(self,message,position):
         #self.police = pygame.font.SysFont('Corbel',25)
         self.message = message
-        self.image  = pygame.image.load((os.path.join('image/bouton', 'spr_bouton.png'))).convert_alpha()        
+        self.image  = pygame.image.load(get_asset_path(os.path.join('image/bouton', 'spr_bouton.png'))).convert_alpha()        
         self.rect   =  self.image.get_rect()
         self.rect.topleft = position
         
