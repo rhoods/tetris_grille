@@ -9,7 +9,7 @@ packages = [{include = "tetris_grille"}]
 [tool.poetry.dependencies]
 python = ">=3.8"
 pygame = "^2.1.0"
-numpy = "^1.21.0"
+numpy = "^1.26.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
