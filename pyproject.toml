@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "tetris_grille"}]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.8"
 pygame = "^2.1.0"
 numpy = "^1.21.0"
 
